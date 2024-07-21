@@ -20,7 +20,6 @@
 .formWrapper {
     display: flex;
     flex-wrap: nowrap;
-    /* Không cho phép các phần tử con xuống dòng */
     justify-content: center;
     gap: 2rem;
 }
@@ -35,7 +34,6 @@
     flex-direction: column;
 }
 
-/* Đảm bảo chiều cao của các phần tử con trong .formContainer và .mapContainer bằng nhau */
 .formWrapper>div {
     flex: 1;
     display: flex;
@@ -50,7 +48,6 @@
 .mapImage {
     width: 100%;
     object-fit: cover;
-    /* Đặt chiều cao cho mapImage bằng với chiều cao của formContainer */
     flex: 1;
 }
 
@@ -60,7 +57,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* Đảm bảo nội dung form được căn chỉnh đều */
 }
 
 .form {
@@ -70,15 +66,17 @@
 }
 
 .formGroup {
-    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .label {
-    display: block;
     font-weight: bold;
-    margin-bottom: 0.5rem;
     color: #555;
     font-family: 'Roboto', sans-serif;
+    text-align: left;
+    /* Căn chỉnh chữ bên trái */
 }
 
 .input,

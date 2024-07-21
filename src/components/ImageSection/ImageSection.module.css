@@ -2,22 +2,21 @@
     position: relative;
     color: #fff;
     overflow: hidden;
-    /* Đảm bảo không có phần tràn ra ngoài */
+    /* Đảm bảo không có phần văn bản tràn ra ngoài */
 }
 
 .banner {
     background: url('../../assets/images/video-bg.jpg') no-repeat center center/cover;
     height: 300px;
-    /* Tăng chiều cao để làm nổi bật hơn */
+    /* Điều chỉnh chiều cao */
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
     text-align: center;
     position: relative;
     overflow: hidden;
-    /* Đảm bảo không có phần tràn ra ngoài */
+    /* Đảm bảo hình ảnh không bị tràn ra ngoài */
 }
 
 .banner::before {
@@ -35,32 +34,80 @@
 .bannerContent {
     position: relative;
     z-index: 2;
-    padding: 20px;
+    padding: 15px;
+    /* Đảm bảo có đủ khoảng cách xung quanh văn bản */
     background: rgba(255, 255, 255, 0.2);
     /* Nền sáng nhẹ với độ mờ */
     border-radius: 10px;
-    max-width: 80%;
+    max-width: 90%;
+    /* Điều chỉnh để văn bản không bị sát mép */
     margin: 0 auto;
+    overflow: hidden;
+    /* Đảm bảo không có phần văn bản tràn ra ngoài */
+    box-sizing: border-box;
+    /* Đảm bảo padding không làm tăng kích thước tổng cộng */
 }
 
 .banner h1 {
-    font-size: 2.5rem;
-    /* Kích thước chữ phù hợp với tiêu đề ngắn gọn */
+    font-size: 1.8rem;
+    /* Kích thước chữ mặc định */
     font-weight: 700;
     /* Độ đậm chữ vừa phải */
     color: #f5f5f5;
     /* Màu chữ sáng để nổi bật trên nền tối */
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
-    /* Hiệu ứng bóng chữ để làm nổi bật */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    /* Hiệu ứng bóng chữ */
     line-height: 1.3;
     /* Khoảng cách dòng dễ đọc */
-    padding: 10px 20px;
-    /* Thêm padding để văn bản không bị sát mép */
-    border-radius: 8px;
-    /* Bo góc cho phần nền văn bản */
-    backdrop-filter: blur(5px);
-    /* Hiệu ứng làm mờ nền phía sau để làm nổi bật văn bản */
+    padding: 0;
+    /* Loại bỏ padding trong văn bản */
     margin: 0;
-    text-transform: uppercase;
-    /* Chữ hoa toàn bộ để tạo sự ấn tượng */
+    text-transform: none;
+    /* Không chuyển chữ thành hoa */
+    word-wrap: break-word;
+    /* Đảm bảo văn bản sẽ tự động xuống dòng nếu cần */
+    overflow-wrap: break-word;
+    /* Đảm bảo văn bản sẽ tự động xuống dòng nếu cần */
+}
+
+@media (max-width: 1200px) {
+    .banner h1 {
+        font-size: 1.6rem;
+        /* Kích thước chữ nhỏ hơn trên màn hình lớn */
+    }
+}
+
+@media (max-width: 992px) {
+    .banner h1 {
+        font-size: 1.4rem;
+        /* Kích thước chữ nhỏ hơn trên màn hình trung bình */
+    }
+}
+
+@media (max-width: 768px) {
+    .banner {
+        height: 250px;
+        /* Chiều cao banner nhỏ hơn trên màn hình nhỏ */
+    }
+
+    .banner h1 {
+        font-size: 1.2rem;
+        /* Kích thước chữ nhỏ hơn trên màn hình nhỏ */
+        padding: 10px;
+        /* Thêm padding cho văn bản */
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        height: 200px;
+        /* Chiều cao banner nhỏ hơn trên màn hình rất nhỏ */
+    }
+
+    .banner h1 {
+        font-size: 1rem;
+        /* Kích thước chữ nhỏ hơn trên màn hình rất nhỏ */
+        padding: 5px;
+        /* Thêm padding nhỏ hơn */
+    }
 }

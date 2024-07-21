@@ -1,0 +1,64 @@
+.contactInfo {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+.contactInfo h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.contactInfo ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contactInfo li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.contactInfo li:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.infoItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.icon {
+    font-size: 2rem;
+    color: #ff5a5f;
+}
+
+.infoDetails {
+    flex: 1;
+}
+
+.infoDetails strong {
+    display: block;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.infoDetails p {
+    margin: 0.5rem 0 0;
+    color: #666;
+}

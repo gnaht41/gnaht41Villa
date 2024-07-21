@@ -1,0 +1,89 @@
+.footer {
+    background: linear-gradient(to right, #ffffff 0%, #f8f9fa 100%);
+    /* Màu nền gradient nhẹ từ trắng đến màu xám nhạt */
+    color: #25150e;
+    /* Màu chữ trong footer */
+    padding: 40px 0;
+    /* Tăng padding để footer trông rõ hơn */
+    text-align: center;
+    /* Căn giữa nội dung */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Thêm hiệu ứng bóng nhẹ cho footer */
+    border-radius: 10px;
+    /* Thêm bo góc để footer trông mềm mại hơn */
+}
+
+.footer h1 {
+    font-size: 2rem;
+    /* Kích thước chữ của tiêu đề lớn hơn */
+    margin-bottom: 15px;
+    /* Khoảng cách dưới tiêu đề */
+}
+
+.footer p {
+    font-size: 1.2rem;
+    /* Kích thước chữ của mô tả lớn hơn */
+    margin-bottom: 20px;
+    /* Khoảng cách dưới mô tả */
+}
+
+.footerLinks {
+    display: flex;
+    justify-content: center;
+    /* Canh giữa liên kết */
+    gap: 20px;
+    /* Khoảng cách giữa các liên kết */
+    margin-bottom: 20px;
+    /* Khoảng cách dưới liên kết */
+}
+
+.footerLinks a {
+    color: #25150e;
+    /* Màu chữ của liên kết */
+    text-decoration: none;
+    /* Xóa gạch chân liên kết */
+    font-weight: 500;
+    /* Độ đậm của chữ liên kết */
+    transition: color 0.3s, transform 0.3s;
+    /* Hiệu ứng chuyển đổi màu sắc và phóng to khi hover */
+}
+
+.footerLinks a:hover {
+    color: #007bff;
+    /* Màu chữ khi hover */
+    transform: scale(1.1);
+    /* Phóng to khi hover */
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: center;
+    /* Canh giữa các biểu tượng xã hội */
+    gap: 20px;
+    /* Khoảng cách giữa các biểu tượng xã hội */
+    margin-bottom: 20px;
+    /* Khoảng cách dưới các biểu tượng xã hội */
+}
+
+.socialIcons a {
+    color: #25150e;
+    /* Màu biểu tượng xã hội */
+    font-size: 2rem;
+    /* Kích thước biểu tượng xã hội lớn hơn */
+    transition: color 0.3s, transform 0.3s;
+    /* Hiệu ứng chuyển đổi màu sắc và phóng to khi hover */
+}
+
+.socialIcons a:hover {
+    color: #007bff;
+    /* Màu biểu tượng xã hội khi hover */
+    transform: scale(1.1);
+    /* Phóng to khi hover */
+}
+
+.footerBottom {
+    font-size: 0.9rem;
+    /* Kích thước chữ của bản quyền */
+    color: #ced4da;
+    /* Màu chữ của bản quyền */
+}

@@ -1,0 +1,221 @@
+.propertyMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    max-width: 1200px;
+}
+
+.mainTitle {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.filterButtons {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.filterButtons button {
+    background-color: #fff;
+    border: 2px solid #ff5a5f;
+    color: #ff5a5f;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.filterButtons button.active {
+    background-color: #ff5a5f;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1.5rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.propertyItem {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%;
+    max-width: 320px;
+    height: 440px;
+    margin: 0 auto;
+}
+
+.propertyItem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.propertyImage {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.propertyImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.propertyDetails {
+    padding: 1rem;
+    text-align: center;
+    flex: 1;
+}
+
+.propertyDetails h3 {
+    margin: 0.5rem 0;
+    color: #ff5a5f;
+    font-size: 1.4rem;
+}
+
+.propertyDetails p {
+    margin: 0.25rem 0;
+    color: #666;
+}
+
+.scheduleVisitBtn {
+    background-color: #ff5a5f;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.scheduleVisitBtn:hover {
+    background-color: #e14d4d;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.scheduleVisitBtn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 90, 95, 0.3);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.pagination button {
+    background-color: #fff;
+    border: 2px solid #ff5a5f;
+    color: #ff5a5f;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    margin: 0 0.25rem;
+}
+
+.pagination button.activePage,
+.pagination button:hover {
+    background-color: #ff5a5f;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.pagination button:disabled {
+    background-color: #f0f0f0;
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+@media (max-width: 1024px) {
+    .gridContainer {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .filterButtons {
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .gridContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .propertyItem {
+        max-width: 100%;
+    }
+
+    .propertyImage {
+        height: 50%;
+    }
+
+    .propertyDetails h3 {
+        font-size: 1.2rem;
+    }
+
+    .propertyDetails p {
+        font-size: 0.9rem;
+    }
+
+    .scheduleVisitBtn {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+
+    .pagination {
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+
+    .pagination button {
+        margin: 0;
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+    }
+
+    .filterButtons {
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+
+    .filterButtons button {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+}

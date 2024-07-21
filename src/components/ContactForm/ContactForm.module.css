@@ -1,0 +1,178 @@
+.container {
+    padding: 3rem;
+    max-width: 1200px;
+    margin: 4rem auto;
+    text-align: center;
+    background: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.formWrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    /* Không cho phép các phần tử con xuống dòng */
+    justify-content: center;
+    gap: 2rem;
+}
+
+.mapContainer,
+.formContainer {
+    flex: 1;
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Đảm bảo chiều cao của các phần tử con trong .formContainer và .mapContainer bằng nhau */
+.formWrapper>div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.mapContainer {
+    overflow: hidden;
+    display: flex;
+}
+
+.mapImage {
+    width: 100%;
+    object-fit: cover;
+    /* Đặt chiều cao cho mapImage bằng với chiều cao của formContainer */
+    flex: 1;
+}
+
+.formContainer {
+    background: #ffffff;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Đảm bảo nội dung form được căn chỉnh đều */
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.formGroup {
+    margin-bottom: 1rem;
+}
+
+.label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-family: 'Roboto', sans-serif;
+}
+
+.input,
+.textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.submitButton {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+    font-family: 'Roboto', sans-serif;
+}
+
+.submitButton:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.contactInfo {
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.contactItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.icon {
+    margin-right: 0.5rem;
+    color: #007bff;
+    font-size: 1.2rem;
+}
+
+.contactLink {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-family: 'Roboto', sans-serif;
+}
+
+.contactLink:hover {
+    color: #007bff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .formWrapper {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .mapImage {
+        height: 200px;
+    }
+
+    .submitButton {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .contactInfo {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .mapImage {
+        height: 150px;
+    }
+
+    .submitButton {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+}
